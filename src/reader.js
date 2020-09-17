@@ -189,6 +189,27 @@ function downloadPage(link) {
     link.href = URI;
 }
 
+window.addEventListener("keydown", (e) => {
+    if (e.ctrlKey || e.metaKey) {
+        if (String.fromCharCode(e.which).toLowerCase() === "o") {
+            e.preventDefault();
+            document.getElementById("fileupload").click();
+        }
+        else if (String.fromCharCode(e.which).toLowerCase() === "f") {
+            e.preventDefault();
+            document.getElementById("fullscreen").click();
+        }
+        if (e.shiftKey) {
+            if (e.altKey) {
+                if (String.fromCharCode(e.which).toLowerCase() === "t") {
+                    e.preventDefault();
+                    document.getElementById("theme").click();
+                }
+            }
+        }
+    }
+});
+
 canvas.style.display = "block";
 canvas.style.marginLeft = "auto";
 canvas.style.marginRight = "auto";
