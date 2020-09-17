@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="google" content="notranslate" />
+        <meta name="description" content="BlankPDF : A new fresh PDF viewer that can view all your PDFs in style."/>
+        <meta name="keywords" content="PDF, Viewer, BlankPDF, Reader, Material, Design"/>
+        <title>BlankPDF Viewer</title>
+        <link rel="stylesheet" href="src/css/main.css">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="container">
+            <canvas id="canvas"></canvas>
+            <div id="text-layer"></div>
+        </div>
+        <div id="controls">
+            <div id="page">
+                <button id="pageup" onclick="changePage(-1);" action="javascript:void(0);"><img src="src/img/arrowUp.png"></button>
+                <button id="pagedown" onclick="changePage(1);" action="javascript:void(0);"><img src="src/img/arrowDown.png"></button>
+                <input id="currentPage" type="text">
+            </div>
+            <span id="pageCountSpan"></span>
+            <div id="zoom">
+                <button id="increaseZoom" onclick="changeZoom(.1)" action="javascript:void(0);"><img src="src/img/plus.png"></button>
+                <button id="decreaseZoom" onclick="changeZoom(-.1)" action="javascript:void(0);"><img src="src/img/minus.png"></button>
+            </div>
+            <div id="other">
+                <a id="downloadPage" download="page.png" onclick="downloadPage(this)"><img src="src/img/imageicon.png"></a>
+                <img src="src/img/fullscreen.png" id="fullscreen">
+                <img src="src/img/theme.png" id="theme" onclick="toggleTheme()">
+            </div>
+        </div>
+        <input type="image" src="src/img/PDF.png"id="uploadimg">
+        <input type="file" id="fileupload" style="display:none;">
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.943/pdf.min.js"></script>
+    <script src="src/reader.js"></script>
+</html>

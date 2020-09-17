@@ -1,0 +1,199 @@
+body {
+    background-color: #f1f1f1;
+}
+
+.dark {
+    background-color: #121212;
+}
+
+canvas {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+@font-face {
+    font-family: "Jetbrains Mono";
+    src: url("../fonts/JETBRAINSMONO-REGULAR.TTF");
+}
+
+#page {
+    position: absolute;
+    bottom: 73%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+#zoom {
+    position: absolute;
+    bottom: 80%;
+    left: 90%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    border-radius: 20px;
+}
+
+#zoom button {
+    background-color: transparent;
+    display: block;
+}
+
+.dark #zoom button {
+    filter: invert();
+}
+
+#page button {
+    background-color: transparent;
+    display: block;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: grab;
+}
+
+#page input {
+    border: none;
+    font-family: "Jetbrains Mono";
+    padding-left: 12.5px;
+    width: 90px;
+    font-weight: 800;
+    font-size: 50px;
+    background-color: transparent;
+    outline: none;
+    border-radius: 10px;
+    color: #777;
+}
+
+#page img {
+    width: 70px;
+    height: 40px;
+}
+
+#zoom img {
+    width: 50px;
+    height: 50px;
+}
+
+#increaseZoom {
+    cursor: zoom-in;
+}
+
+#decreaseZoom {
+    cursor: zoom-out;
+}
+
+#downloadPage {
+    position: absolute;
+    bottom: 5px;
+    background-blend-mode: hue;
+    font-family: "Nunito";
+    font-weight: 1000;
+    text-decoration: underline;
+    font-size: 20px;
+    color: #777;
+    cursor: pointer;
+}
+
+.dark #downloadPage {
+    filter: invert();
+}
+
+#downloadPage a {
+    color: #777;
+}
+
+#text-layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    opacity: 0.1;
+    line-height: 1.0;
+}
+ 
+#text-layer > div {
+    color: transparent;
+    position: absolute;
+    white-space: pre;
+    cursor: text;
+    transform-origin: 0% 0%;
+}
+
+#pageCountSpan {
+    font-family: "Jetbrains Mono";
+    font-size: 30px;
+    font-weight: bolder;
+    padding-left: 20px;
+    color: #666666;
+    position: absolute;
+    bottom: 68%;
+    box-shadow: 5px 5px 10px #555;
+    width: 85px;
+}
+
+#uploadimg {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    display: flex;
+    grid-template: auto;
+    bottom: 50%;
+    image-rendering: crisp-edges;
+}
+
+.dark #uploadimg {
+    filter: invert();
+}
+
+#other {
+    display: block;
+    position: absolute;
+    bottom: 250px;
+}
+
+#fullscreen {
+    width: 100px;
+    height: 100px;
+    image-rendering: pixelated;
+    position: absolute;
+    top: 25px;
+    cursor: pointer;
+}
+
+.dark #fullscreen {
+    filter: invert();
+}
+
+#downloadPage img {
+    width: 100px;
+    height: 100px;
+    image-rendering: crisp-edges;
+}
+
+#theme {
+    image-rendering: crisp-edges;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 125px;
+}
+
+.dark #theme {
+    filter: invert();
+}
+
+.dark #other a::selection {
+    background-color: orange;
+}
+
+.dark #other img::selection {
+    background-color: orange;
+}
+
+.dark #zoom button img::selection {
+    background-color: orange;
+}
+
+.dark #uploadimg::selection {
+    background-color: orange;
+}

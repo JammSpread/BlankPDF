@@ -1,2 +1,2 @@
 # BlankPDF
-A material PDF Viewer developed using the pdf.js library.
+A material clean single-page PDF Viewer made with the pdf.js library.
