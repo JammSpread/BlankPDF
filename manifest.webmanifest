@@ -1,0 +1,17 @@
+{
+  "short_name": "BlankPDF",
+  "name": "BlankPDF Viewer",
+  "description": "A nice material simple single-page PDF viewer to meet your needs.",
+  "icons": [
+    {
+      "src": "/BlankPDF/img/pdficonrounded.svg",
+      "type": "image/svg",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/BlankPDF",
+  "background_color": "#3367D6",
+  "display": "standalone",
+  "scope": "/BlankPDF",
+  "theme_color": "#3367D6"
+}
