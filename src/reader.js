@@ -8,7 +8,6 @@ const pageNumberSpan = document.getElementById("pageCountSpan");
 const dpr = window.devicePixelRatio || 1;
 const textLayerDiv = document.getElementById("text-layer");
 const fileUpload = document.getElementById("fileupload");
-
 let theme = false;
 
 function toggleTheme() {
@@ -24,6 +23,7 @@ if (localStorage.getItem("dark") == "true") {
 let reader = {
     pdf: null,
     pdfFile: null,
+    path: "./BlankPDF Start.pdf",
     currentPage: Number.parseInt(localStorage.getItem("pageNum")) || 1,
     zoom: 1,
     maxPages : null,
@@ -105,12 +105,11 @@ function load(path) {
             document.title = "Viewing PDF : " + reader.pdfFile.name;
         }
         catch (err) {
-            console.log(err);
         }
     });
 }
 
-load("./BlankPDF Start.pdf");
+load(reader.path);
 
 function render() {
     if (reader.currentPage < 1) {

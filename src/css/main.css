@@ -81,15 +81,12 @@ button {
 }
 
 #downloadPage {
-    position: absolute;
-    bottom: 5px;
     background-blend-mode: hue;
     font-family: "Nunito";
     font-weight: 1000;
     text-decoration: underline;
     font-size: 20px;
     color: #777;
-    cursor: pointer;
 }
 
 .dark #downloadPage {
@@ -132,12 +129,6 @@ button {
 }
 
 #uploadimg {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    display: flex;
-    grid-template: auto;
-    bottom: 50%;
     image-rendering: crisp-edges;
 }
 
@@ -146,18 +137,25 @@ button {
 }
 
 #other {
-    display: block;
     position: absolute;
-    bottom: 250px;
+    bottom: calc(100vh / 15);
+}
+
+#other img {
+    width: calc(100vh / 8);
+    height: calc(100vh / 8);
+    cursor: pointer;
+    position:relative;
+}
+
+#other input {
+    width: calc(100vh / 8);
+    height: calc(100vh / 8);
 }
 
 #fullscreen {
-    width: 100px;
-    height: 100px;
     image-rendering: pixelated;
     position: absolute;
-    top: 25px;
-    cursor: pointer;
 }
 
 .dark #fullscreen {
@@ -165,17 +163,11 @@ button {
 }
 
 #downloadPage img {
-    width: 100px;
-    height: 100px;
     image-rendering: crisp-edges;
 }
 
 #theme {
     image-rendering: crisp-edges;
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    top: 125px;
 }
 
 .dark #theme {
