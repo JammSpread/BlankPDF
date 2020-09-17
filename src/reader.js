@@ -71,6 +71,9 @@ document.onkeydown = (event) => {
     else if (event.keyCode === 35) {
         lastPage();
     }
+    else if (event.keyCode === 48) {
+        resetZoom();
+    }
 }
 
 pageInput.onkeypress = (event) => {
@@ -173,14 +176,12 @@ function lastPage() {
 function changeZoom(input) {
     reader.zoom += input;
     render();
-    localStorage.setItem("zoom", reader.zoom);
 }
 
 function resetZoom() {
     if (reader.zoom != 1) {
         reader.zoom = 1;
         render();
-        localStorage.setItem("zoom", reader.zoom);
     }
 }
 
