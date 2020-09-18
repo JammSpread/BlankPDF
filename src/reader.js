@@ -30,6 +30,16 @@ let reader = {
     renderingState : "finished"
 };
 
+if ('serviceWorker' in navigator) {
+    window.onload = (event) => {
+        navigator.serviceWorker.register("./src/sw.js").then(function (registration) {
+            console.log("Service worker successfully registered...");
+        }, function (err) {
+            console.log(err);
+        });
+    };
+}
+
 document.getElementById("fullscreen").addEventListener("click", (event) => {
     canvas.requestFullscreen();
 });
@@ -93,6 +103,11 @@ pageInput.onkeypress = (event) => {
         }
     };
 };
+
+function autoZoom() {
+    reader.zoom = window.innerHeight / 500;
+    render();
+}
 
 function load(path) {
     pdfjsLib.getDocument(path).then((pdf) => {
@@ -213,3 +228,5 @@ window.addEventListener("keydown", (e) => {
 canvas.style.display = "block";
 canvas.style.marginLeft = "auto";
 canvas.style.marginRight = "auto";
+
+autoZoom();
