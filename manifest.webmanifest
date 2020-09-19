@@ -16,8 +16,8 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "/",
   "display": "standalone",
-  "scope": "/",
+  "scope": "/BlankPDF/",
+  "start_url": "/BlankPDF/",
   "prefer_related_applications": false
 }
