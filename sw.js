@@ -3,7 +3,6 @@ const precache = 'precache-v1';
 const precacheURLS = ['/'];
 
 self.addEventListener("install", function(event) {
-    console.log("hi");
     event.waitUntil(
         caches.open(precache).then((cache) => cache.addAll(precacheURLS)).then(self.skipWaiting())
     )
