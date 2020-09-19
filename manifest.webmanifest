@@ -6,12 +6,12 @@
   "theme_color": "#f1f1f1",
   "icons": [
     {
-      "src": "/src/img/pdficon192.png",
+      "src": "src/img/pdficon192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/src/img/pdficon512.png",
+      "src": "src/img/pdficon512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
