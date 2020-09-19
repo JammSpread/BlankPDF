@@ -5,7 +5,7 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 const pageInput = document.getElementById("currentPage");
 const pageNumberSpan = document.getElementById("pageCountSpan");
-const dpr = window.devicePixelRatio || 1;
+const dpr = window.devicePixelRatio || 0.5;
 const textLayerDiv = document.getElementById("text-layer");
 const fileUpload = document.getElementById("fileupload");
 let theme = false;
@@ -25,20 +25,10 @@ let reader = {
     pdfFile: null,
     path: "./BlankPDF Start.pdf",
     currentPage: Number.parseInt(localStorage.getItem("pageNum")) || 1,
-    zoom: 1,
+    zoom: 0.8,
     maxPages : null,
     renderingState : "finished"
 };
-
-if ('serviceWorker' in navigator) {
-    window.onload = (event) => {
-        navigator.serviceWorker.register("./src/sw.js").then(function (registration) {
-            console.log("Service worker successfully registered...");
-        }, function (err) {
-            console.log(err);
-        });
-    };
-}
 
 document.getElementById("fullscreen").addEventListener("click", (event) => {
     canvas.requestFullscreen();
@@ -103,11 +93,6 @@ pageInput.onkeypress = (event) => {
         }
     };
 };
-
-function autoZoom() {
-    reader.zoom = window.innerHeight / 500;
-    render();
-}
 
 function load(path) {
     pdfjsLib.getDocument(path).then((pdf) => {
@@ -228,5 +213,3 @@ window.addEventListener("keydown", (e) => {
 canvas.style.display = "block";
 canvas.style.marginLeft = "auto";
 canvas.style.marginRight = "auto";
-
-autoZoom();

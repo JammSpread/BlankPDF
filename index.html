@@ -7,11 +7,15 @@
         <meta name="description" content="BlankPDF : A new fresh PDF viewer that can view all your PDFs in style."/>
         <meta name="keywords" content="PDF, Viewer, BlankPDF, Reader, Material, Design"/>
         <title>BlankPDF Viewer</title>
-        <link rel="icon" href="src/img/pdficonroundedcustom.svg" width=192px height=192px type="image/svg">
+        <meta name="theme-color" content="#f1f1f1">
+        <link rel="manifest" href="manifest.webmanifest">
+        <link rel="apple-touch-icon" href="src/img/pdfiphoneicon.png" sizes="192x192">
+        <link rel="icon" href="src/img/pdficon192.png" width=192px height=192px type="image/png">
         <link rel="stylesheet" href="src/css/main.css">
-        <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+        <!--<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">-->
     </head>
     <body>
+        <noscript>Sorry, but you need javascript for this application.</noscript>
         <div id="container">
             <canvas id="canvas"></canvas>
             <div id="text-layer"></div>
@@ -36,6 +40,18 @@
             </div>
         </div>
     </body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.943/pdf.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.943/pdf.min.js"></script>-->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.onload = (event) => {
+            navigator.serviceWorker.register("/sw.js").then(function (registration) {
+                console.log("Service worker successfully registered...");
+            }, function (err) {
+                console.log(err);
+            });
+            };
+        }
+    </script>
+    <script src="src/pdf.min.js"></script>
     <script src="src/reader.js"></script>
 </html>

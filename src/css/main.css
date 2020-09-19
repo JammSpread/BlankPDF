@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "Nunito";
+    src: url(../fonts/Nunito-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Jetbrains Mono";
+    src: url("../fonts/JETBRAINSMONO-REGULAR.TTF");
+}
+
 body {
     background-color: #f1f1f1;
 }
@@ -10,23 +20,24 @@ canvas {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-@font-face {
-    font-family: "Jetbrains Mono";
-    src: url("../fonts/JETBRAINSMONO-REGULAR.TTF");
-}
-
 #page {
     position: absolute;
+    background-color: #eeeeee;
     bottom: 73%;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 #zoom {
     position: absolute;
+    background-color: #eeeeee;
     bottom: 80%;
     left: 90%;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     border-radius: 20px;
+}
+
+.dark #zoom {
+    background-color: #070707;
 }
 
 #zoom button {
@@ -41,6 +52,10 @@ canvas {
 #page button {
     background-color: transparent;
     display: block;
+}
+
+.dark #page {
+    background-color: #070707;
 }
 
 button {
@@ -118,14 +133,20 @@ button {
 
 #pageCountSpan {
     font-family: "Jetbrains Mono";
+    background-color: #eeeeee;
     font-size: 30px;
     font-weight: bolder;
     padding-left: 20px;
     color: #666666;
     position: absolute;
+    z-index: -1;
     bottom: 68%;
-    box-shadow: 5px 5px 10px #555;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     width: 85px;
+}
+
+.dark #pageCountSpan {
+    background-color: #070707;
 }
 
 #uploadimg {
