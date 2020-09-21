@@ -41,7 +41,7 @@ window.addEventListener("resize", () => {
     }
 });
 
-document.getElementById("uploadimg").onclick = (event) => {
+document.getElementById("uploadpdf").onclick = (event) => {
     fileUpload.setAttribute("accept", "application/pdf");
     fileUpload.click();
 };
