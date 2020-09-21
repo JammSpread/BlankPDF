@@ -1,11 +1,13 @@
 @font-face {
     font-family: "Nunito";
     src: url(../fonts/Nunito-Regular.ttf);
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Jetbrains Mono";
     src: url("../fonts/JETBRAINSMONO-REGULAR.TTF");
+    font-display: swap;
 }
 
 body {
@@ -149,11 +151,11 @@ button {
     background-color: #070707;
 }
 
-#uploadimg {
+#uploadpdf {
     image-rendering: crisp-edges;
 }
 
-.dark #uploadimg {
+.dark #uploadpdf {
     filter: invert();
 }
 
@@ -207,6 +209,6 @@ button {
     background-color: orange;
 }
 
-.dark #uploadimg::selection {
+.dark #uploadpdf::selection {
     background-color: orange;
 }

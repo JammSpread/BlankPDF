@@ -178,8 +178,8 @@ function changeZoom(input) {
 }
 
 function resetZoom() {
-    if (reader.zoom != 1) {
-        reader.zoom = 1;
+    if (reader.zoom != 0.8) {
+        reader.zoom = 0.8;
         render();
     }
 }

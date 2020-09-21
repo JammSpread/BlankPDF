@@ -22,20 +22,20 @@
         </div>
         <div id="controls">
             <div id="page">
-                <button id="pageup" onclick="changePage(-1);" action="javascript:void(0);"><img src="src/img/arrowUp.png"></button>
-                <button id="pagedown" onclick="changePage(1);" action="javascript:void(0);"><img src="src/img/arrowDown.png"></button>
+                <button id="pageup" onclick="changePage(-1);" action="javascript:void(0);" aria-label="Go 1 Page Up"><img src="src/img/arrowUp.png"></button>
+                <button id="pagedown" onclick="changePage(1);" action="javascript:void(0);" aria-label="Go 1 Page Down"><img src="src/img/arrowDown.png"></button>
                 <input id="currentPage" type="text">
             </div>
             <span id="pageCountSpan"></span>
             <div id="zoom">
-                <button id="increaseZoom" onclick="changeZoom(0.05)" action="javascript:void(0);"><img src="src/img/plus.png"></button>
-                <button id="decreaseZoom" onclick="changeZoom(-0.05)" action="javascript:void(0);"><img src="src/img/minus.png"></button>
+                <button id="increaseZoom" onclick="changeZoom(0.05)" action="javascript:void(0);" aria-label="Zoom In"><img src="src/img/plus.png"></button>
+                <button id="decreaseZoom" onclick="changeZoom(-0.05)" action="javascript:void(0);" aria-label="Zoom Out"><img src="src/img/minus.png"></button>
             </div>
             <div id="other">
                 <a id="downloadPage" download="page.png" onclick="downloadPage(this)"><img src="src/img/imageicon.png"></a><br>
-                <img src="src/img/fullscreen.png" id="fullscreen"><br>
-                <img src="src/img/theme.png" id="theme" onclick="toggleTheme()"><br>
-                <input type="image" src="src/img/PDF.png"id="uploadimg">
+                <img src="src/img/fullscreen.png" id="fullscreen" alt="Go Fullscreen"><br>
+                <img src="src/img/theme.png" id="theme" onclick="toggleTheme()" alt="Toggle the Theme"><br>
+                <input type="image" src="src/img/PDF.png" id="uploadpdf" alt="Open PDF">
                 <input type="file" id="fileupload" style="display:none;" accesskey="o">
             </div>
         </div>
