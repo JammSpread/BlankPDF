@@ -23,7 +23,7 @@ if (localStorage.getItem("dark") == "true") {
 let reader = {
     pdf: null,
     pdfFile: null,
-    path: "/BlankPDF/BlankPDF Start.pdf",
+    path: "/BlankPDF/BlankPDFcompressed.pdf",
     currentPage: Number.parseInt(localStorage.getItem("pageNum")) || 1,
     zoom: 0.8,
     maxPages : null,
