@@ -1,6 +1,6 @@
 "use strict";
 
-const body = document.body;
+const addressColor = document.getElementById("addressColor");
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 const pageInput = document.getElementById("currentPage");
@@ -11,7 +11,13 @@ const fileUpload = document.getElementById("fileupload");
 let theme = false;
 
 function toggleTheme() {
-    body.classList.toggle("dark");
+    document.body.classList.toggle("dark");
+    if (document.body.classList.contains('dark')) {
+        addressColor.setAttribute("content", "#121212");
+    }
+    else if (!document.body.classList.contains('dark')) {
+        addressColor.setAttribute("content", "#f1f1f1");
+    }
     theme = !theme;
     localStorage.setItem("dark", theme.toString());
 }
